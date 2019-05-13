@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumberGame3", "RandomNumberGame3\RandomNumberGame3.csproj", "{48EF5568-0411-49FC-B836-A3B1F56430F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsGuessingGame", "WindowsFormsGuessingGame\WindowsFormsGuessingGame.csproj", "{22FC274B-354D-4673-8879-BCF74FB354C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfGuessingGame", "WpfGuessingGame\WpfGuessingGame.csproj", "{F76FCF31-15B0-4A58-871D-3F2746E9CAB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{48EF5568-0411-49FC-B836-A3B1F56430F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48EF5568-0411-49FC-B836-A3B1F56430F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48EF5568-0411-49FC-B836-A3B1F56430F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22FC274B-354D-4673-8879-BCF74FB354C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22FC274B-354D-4673-8879-BCF74FB354C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22FC274B-354D-4673-8879-BCF74FB354C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22FC274B-354D-4673-8879-BCF74FB354C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F76FCF31-15B0-4A58-871D-3F2746E9CAB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76FCF31-15B0-4A58-871D-3F2746E9CAB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76FCF31-15B0-4A58-871D-3F2746E9CAB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76FCF31-15B0-4A58-871D-3F2746E9CAB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
