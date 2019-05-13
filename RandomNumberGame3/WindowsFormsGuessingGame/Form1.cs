@@ -23,24 +23,50 @@ namespace WindowsFormsGuessingGame
         public Form1()
         {
             InitializeComponent();
+            testing.Text = easyGame.SecretNumber.ToString();//for testing purposes only, delete.
         }
 
         private void SubmitGuess_Click(object sender, EventArgs e)
         {
             /*Check which level has been selected and plays the sppropriate class*/
-            if (easyLevel.Checked == true && easyGame.CurrentGuessCount < 3)
+            if (easyLevel.Checked == true && easyGame.CurrentGuessCount <= 3)
             {
-                testing.Text = easyGame.SecretNumber.ToString();
+                countDown.Text = easyGame.CurrentGuessCount.ToString();
                 int.TryParse(guess.Text, out int result );
                 easyGame.CurrentGuess = result;
                 guess.Clear();
                 easyGame.CalculateScore();
+                guessesList.Items.Add(easyGame.Guesses[easyGame.Guesses.Count-1]);
+                if (easyGame.LevelComplete == true)
+                {
+                    mediumLevel.Checked = true;
+                    guessesList.Items.Add($"{easyGame.DifficultyLevel} complete...");
+                }
             }
-            else if (easyGame.LevelComplete == true)
+            if (mediumLevel.Checked == true && mediumGame.CurrentGuessCount < 3)
             {
-                mediumLevel.Checked = true;
+                testing.Text = mediumGame.SecretNumber.ToString();//for testing purposes only, delete.
+                countDown.Text = mediumGame.CurrentGuessCount.ToString();
+                int.TryParse(guess.Text, out int result);
+                mediumGame.CurrentGuess = result;
+                guess.Clear();
+                mediumGame.CalculateScore();
+                if (mediumGame.LevelComplete == true)
+                    hardLevel.Checked = true;
             }
+            
 
+            /*Display the user name input*/
+            if (easyGame.GameOver == true || mediumGame.GameOver == true || hardGame.GameOver == true)
+            {
+                enterNameLbl.Visible = true;
+                playerName.Visible = true;
+                submitName.Visible = true;
+                submitGuess.Visible = false;
+                guess.Visible = false;
+                makeGuessLbl.Text = "Game over";
+                guessesList.Items.Add($"...Game Over...");
+            }
         }
     }
 }

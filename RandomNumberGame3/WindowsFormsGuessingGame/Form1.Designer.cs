@@ -42,8 +42,10 @@
             this.mediumLevel = new System.Windows.Forms.RadioButton();
             this.easyLevel = new System.Windows.Forms.RadioButton();
             this.gameTitle = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.guessesList = new System.Windows.Forms.ListBox();
             this.testing = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.countDown = new System.Windows.Forms.Label();
             this.scoreBox.SuspendLayout();
             this.difficultyLevelBox.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,7 @@
             this.submitName.TabIndex = 21;
             this.submitName.Text = "Submit";
             this.submitName.UseVisualStyleBackColor = true;
+            this.submitName.Visible = false;
             // 
             // playerName
             // 
@@ -70,6 +73,7 @@
             this.playerName.Name = "playerName";
             this.playerName.Size = new System.Drawing.Size(221, 50);
             this.playerName.TabIndex = 20;
+            this.playerName.Visible = false;
             // 
             // enterNameLbl
             // 
@@ -80,6 +84,7 @@
             this.enterNameLbl.Size = new System.Drawing.Size(146, 39);
             this.enterNameLbl.TabIndex = 19;
             this.enterNameLbl.Text = "Enter player name\r\n(5 characters max)";
+            this.enterNameLbl.Visible = false;
             // 
             // scoreBox
             // 
@@ -148,7 +153,7 @@
             // 
             this.makeGuessLbl.AutoSize = true;
             this.makeGuessLbl.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.makeGuessLbl.Location = new System.Drawing.Point(80, 219);
+            this.makeGuessLbl.Location = new System.Drawing.Point(80, 230);
             this.makeGuessLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.makeGuessLbl.Name = "makeGuessLbl";
             this.makeGuessLbl.Size = new System.Drawing.Size(120, 18);
@@ -160,6 +165,8 @@
             this.difficultyLevelBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.difficultyLevelBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.difficultyLevelBox.Controls.Add(this.countDown);
+            this.difficultyLevelBox.Controls.Add(this.label1);
             this.difficultyLevelBox.Controls.Add(this.hardLevel);
             this.difficultyLevelBox.Controls.Add(this.mediumLevel);
             this.difficultyLevelBox.Controls.Add(this.easyLevel);
@@ -223,14 +230,14 @@
             this.gameTitle.Text = "RANDOM NUMBER GAME";
             this.gameTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // listBox1
+            // guessesList
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(27, 444);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(516, 148);
-            this.listBox1.TabIndex = 22;
+            this.guessesList.FormattingEnabled = true;
+            this.guessesList.ItemHeight = 16;
+            this.guessesList.Location = new System.Drawing.Point(27, 444);
+            this.guessesList.Name = "guessesList";
+            this.guessesList.Size = new System.Drawing.Size(516, 148);
+            this.guessesList.TabIndex = 22;
             // 
             // testing
             // 
@@ -241,13 +248,32 @@
             this.testing.TabIndex = 23;
             this.testing.Text = "Testing";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(130, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Guesses:";
+            // 
+            // countDown
+            // 
+            this.countDown.AutoSize = true;
+            this.countDown.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countDown.Location = new System.Drawing.Point(144, 60);
+            this.countDown.Name = "countDown";
+            this.countDown.Size = new System.Drawing.Size(37, 41);
+            this.countDown.TabIndex = 4;
+            this.countDown.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 610);
             this.Controls.Add(this.testing);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.guessesList);
             this.Controls.Add(this.submitName);
             this.Controls.Add(this.playerName);
             this.Controls.Add(this.enterNameLbl);
@@ -285,8 +311,10 @@
         private System.Windows.Forms.RadioButton mediumLevel;
         private System.Windows.Forms.RadioButton easyLevel;
         private System.Windows.Forms.Label gameTitle;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox guessesList;
         private System.Windows.Forms.Label testing;
+        private System.Windows.Forms.Label countDown;
+        private System.Windows.Forms.Label label1;
     }
 }
 
